@@ -17,6 +17,10 @@ export const FirstExample = () => {
       .catch((error) => console.error(error));
   }, []);
 
+  // ? ⬆️ 4) si no le pasamos un array de dependencias, el efecto se ejecutará cada vez que el componente se renderice
+  // ? ⬆️ 5) si le pasamos un array de dependencias vacío, el efecto se ejecutará solo la primera vez que el componente se renderice
+  // ? ⬆️ 6) si le pasamos un array de dependencias con elementos, el efecto se ejecutará cuando el componente se renderice y cuando alguno de los elementos del array cambie su valor
+
   return (
     <section>
       <img style={{ width: "300px", height: "300px" }} src={image} alt="" />
